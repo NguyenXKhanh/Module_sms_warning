@@ -13,7 +13,7 @@ class TimeoutEventRepo:
 
         try:
             cursor.execute(
-                """SELECT * FROM video_timeout_event WHERE job_id=%s AND status='OPEN'""",(job_id,))
+                """SELECT * FROM video_timeout_event WHERE job_id=%s AND status='OPEN' FOR UPDATE""",(job_id,))
             return cursor.fetchone()
         
         except Error:
@@ -63,15 +63,6 @@ class TimeoutEventRepo:
                 """,
                 (job_id, media_id, resolution, limit, runtime, exceed)
             )
-            conn.commit()
-        except IntegrityError:
-            logger.warning(f"Duplicate timeout event for job {job_id}, ignore")
-
-        except Error:
-            conn.rollback()
-            logger.exception(f"Insert event failed for job {job_id}")
-            raise
-
         finally:
             cursor.close()
 
@@ -93,14 +84,6 @@ class TimeoutEventRepo:
                 """,
                 (runtime, exceed, job_id)
             )
-
-            conn.commit()
-
-        except Error:
-            conn.rollback()
-            logger.exception(f"Update event failed for job {job_id}")
-            raise
-
         finally:
             cursor.close()
 
@@ -118,14 +101,6 @@ class TimeoutEventRepo:
                 """,
                 (job_id,)
             )
-
-            conn.commit()
-
-        except Error:
-            conn.rollback()
-            logger.exception(f"Close event failed for job {job_id}")
-            raise
-
         finally:
             cursor.close()
 

@@ -40,7 +40,7 @@ class MonitorService:
 
                 TimeoutEventRepo.insert_event(
                     conn,
-                    job_id=job["id"],
+                    job_id=job_id,
                     media_id=job["csm_media_id"],
                     resolution=resolution,
                     limit=limit,
@@ -65,6 +65,8 @@ class MonitorService:
                     runtime=runtime,
                     exceed=exceed
                 )
+            
+            conn.commit()
 
         except Exception:
             if conn and conn.is_connected():
