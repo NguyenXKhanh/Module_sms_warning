@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     try:        
         MySQLPool.init_pool()
-        MonitorService().run_forever(MONITOR_GRACE_MINUTES)
+        MonitorService().run_forever()
     
     finally:
         logger.info("Releasing resources")

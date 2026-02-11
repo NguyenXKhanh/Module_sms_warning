@@ -49,7 +49,6 @@ class MonitorService:
                 )
 
                 log_timeout_job(
-                    conn,
                     job_id=job["id"],
                     media_id=job["csm_media_id"],
                     resolution=resolution,
@@ -66,11 +65,13 @@ class MonitorService:
                     runtime=runtime,
                     exceed=exceed
                 )
-            conn.commit()
 
         except Exception:
-            if conn:
-                conn.rollback()
+            if conn and conn.is_connected():
+                try:
+                    conn.rollback()
+                except Exception as rollback_error:
+                    logger.exception(f"Error during rollback: {rollback_error}")
             logger.exception(f"Job {job_id} error while processing")
 
         finally:
@@ -87,7 +88,7 @@ class MonitorService:
             logger.info(f"{len(jobs)} running jobs")
 
         finally:
-            if conn:
+            if conn and conn.is_connected():
                 MySQLPool.release_conn(conn)
 
         if not jobs:
@@ -121,8 +122,11 @@ class MonitorService:
             conn.commit()
 
         except Exception:
-            if conn:
-                conn.rollback()
+            if conn and conn.is_connected():
+                try:
+                    conn.rollback()
+                except Exception as rollback_error:
+                    logger.exception(f"Error during rollback: {rollback_error}")
             logger.exception("Close finished events failed")
 
         finally:
@@ -130,7 +134,7 @@ class MonitorService:
                 MySQLPool.release_conn(conn)
 
 
-    def run_forever(self, window_minutes):
+    def run_forever(self):
 
         logger.info("Encode Monitor Service started")
 
@@ -150,4 +154,7 @@ class MonitorService:
 
         except KeyboardInterrupt:
             logger.info("\nService stopped")
+
+        finally:
             executor.shutdown(wait=True)
+            logger.info("ThreadPollExecutor shutdown completed")

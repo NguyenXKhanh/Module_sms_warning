@@ -13,7 +13,7 @@ class VideoRepository:
         sql = """
         SELECT id, csm_media_id, resolution, convert_start_time
         FROM pe_quality_metric.video
-        WHERE status %10 = 2
+        WHERE status % 10 = 2
           AND convert_start_time IS NOT NULL
           AND convert_end_time IS NULL
         """
