@@ -1,86 +1,1811 @@
-2026-02-06 22:41:09,149 | INFO | MySQLPool | Initializing MySQL connection pool
-2026-02-06 22:41:17,474 | INFO | MySQLPool | Initializing success 
-2026-02-06 22:41:17,475 | INFO | MonitorService | Encode Monitor Service started
-2026-02-06 22:41:19,060 | INFO | MonitorService | 1 running jobs
-2026-02-06 22:41:19,061 | INFO | MonitorService | Found job1 time out
-2026-02-06 22:41:19,061 | INFO | MonitorService | Scan completed, sleeping 60s...
+2026-02-11 14:49:20,174 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-11 14:49:29,381 | INFO | MySQLPool | Initializing success 
+2026-02-11 14:49:29,381 | INFO | MonitorService | Encode Monitor Service started
+2026-02-11 14:49:31,190 | INFO | MonitorService | 5 running jobs
+2026-02-11 14:49:31,199 | ERROR | MonitorService | [SYSTEM ERROR] 'dict' object has no attribute 'get_conn'
+2026-02-11 14:49:31,200 | INFO | MonitorService | Scan completed, sleeping 60s...
 
-2026-02-06 22:42:20,752 | INFO | MonitorService | 1 running jobs
-2026-02-06 22:42:20,752 | INFO | MonitorService | Found job1 time out
-2026-02-06 22:42:20,753 | INFO | MonitorService | Scan completed, sleeping 60s...
-
-2026-02-06 22:42:29,364 | INFO | MonitorService | 
+2026-02-11 14:50:22,645 | INFO | MonitorService | 
 Service stopped
-2026-02-09 22:19:55,814 | INFO | MySQLPool | Initializing MySQL connection pool
-2026-02-09 22:20:04,223 | INFO | MySQLPool | Initializing success 
-2026-02-09 22:20:04,223 | INFO | MonitorService | Encode Monitor Service started
-2026-02-09 22:20:06,039 | INFO | MonitorService | 1 running jobs
-2026-02-09 22:20:06,040 | INFO | MonitorService | Scan completed, sleeping 60s...
+2026-02-11 14:50:22,646 | INFO | Main | Releasing resources
+2026-02-11 14:50:22,646 | INFO | MySQLPool | Closing MySQL pool
+2026-02-11 14:57:23,052 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-11 14:57:32,664 | INFO | MySQLPool | Initializing success 
+2026-02-11 14:57:32,665 | INFO | MonitorService | Encode Monitor Service started
+2026-02-11 14:57:34,626 | INFO | MonitorService | 5 running jobs
+2026-02-11 14:57:34,627 | INFO | MonitorService | Found job1 time out
+2026-02-11 14:57:34,628 | ERROR | MonitorService | Job1 error while processing
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 30, in process_job
+    event = TimeoutEventRepo.find_open_event(job_id)
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 12, in find_open_event
+    conn = MYSQL_POOL.get_conn()
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'get_conn'
+2026-02-11 14:57:34,628 | INFO | MonitorService | Found job245 time out
+2026-02-11 14:57:34,628 | INFO | MonitorService | Found job246 time out
+2026-02-11 14:57:34,629 | INFO | MonitorService | Found job250 time out
+2026-02-11 14:57:34,629 | ERROR | MonitorService | [SYSTEM ERROR] 'dict' object has no attribute 'get_conn'
+2026-02-11 14:57:34,630 | ERROR | MonitorService | Job245 error while processing
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 30, in process_job
+    event = TimeoutEventRepo.find_open_event(job_id)
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 12, in find_open_event
+    conn = MYSQL_POOL.get_conn()
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'get_conn'
+2026-02-11 14:57:34,631 | ERROR | MonitorService | Job246 error while processing
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 30, in process_job
+    event = TimeoutEventRepo.find_open_event(job_id)
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 12, in find_open_event
+    conn = MYSQL_POOL.get_conn()
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'get_conn'
+2026-02-11 14:57:34,631 | ERROR | MonitorService | Job250 error while processing
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 30, in process_job
+    event = TimeoutEventRepo.find_open_event(job_id)
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 12, in find_open_event
+    conn = MYSQL_POOL.get_conn()
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'get_conn'
+2026-02-11 14:57:34,631 | INFO | MonitorService | Scan completed, sleeping 60s...
 
-2026-02-09 22:21:07,628 | INFO | MonitorService | 1 running jobs
-2026-02-09 22:21:07,628 | INFO | MonitorService | Scan completed, sleeping 60s...
-
-2026-02-09 22:22:09,234 | INFO | MonitorService | 1 running jobs
-2026-02-09 22:22:09,235 | INFO | MonitorService | Scan completed, sleeping 60s...
-
-2026-02-09 22:23:10,885 | INFO | MonitorService | 1 running jobs
-2026-02-09 22:23:10,886 | INFO | MonitorService | Scan completed, sleeping 60s...
-
-2026-02-09 22:23:28,218 | INFO | MonitorService | 
+2026-02-11 14:57:41,127 | INFO | MonitorService | 
 Service stopped
-2026-02-09 22:23:28,218 | INFO | Main | Releasing resources
-2026-02-09 22:23:28,218 | INFO | MySQLPool | Closing MySQL pool
-2026-02-09 22:23:30,450 | INFO | MySQLPool | Initializing MySQL connection pool
-2026-02-09 22:23:39,112 | INFO | MySQLPool | Initializing success 
-2026-02-09 22:23:39,112 | INFO | MonitorService | Encode Monitor Service started
-2026-02-09 22:23:40,817 | INFO | MonitorService | 1 running jobs
-2026-02-09 22:23:40,818 | INFO | MonitorService | Scan completed, sleeping 60s...
+2026-02-11 14:57:41,128 | INFO | Main | Releasing resources
+2026-02-11 14:57:41,128 | INFO | MySQLPool | Closing MySQL pool
+2026-02-11 15:02:11,946 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-11 15:02:21,177 | INFO | MySQLPool | Initializing success 
+2026-02-11 15:02:21,178 | INFO | MonitorService | Encode Monitor Service started
+2026-02-11 15:02:22,921 | INFO | MonitorService | 5 running jobs
+2026-02-11 15:02:22,922 | INFO | MonitorService | Found job1 time out
+2026-02-11 15:02:22,922 | INFO | MonitorService | Found job245 time out
+2026-02-11 15:02:22,922 | INFO | MonitorService | Found job246 time out
+2026-02-11 15:02:22,923 | INFO | MonitorService | Found job250 time out
+2026-02-11 15:02:24,790 | INFO | MonitorService | Create timeout event for job 1
+2026-02-11 15:02:25,057 | INFO | MonitorService | Create timeout event for job 245
+2026-02-11 15:02:25,413 | ERROR | MonitorService | [SYSTEM ERROR] 1146 (42S02): Table 'pe_quality_metric.encode_timeout_event' doesn't exist
+2026-02-11 15:02:25,413 | INFO | MonitorService | Scan completed, sleeping 60s...
 
-2026-02-09 22:24:02,968 | INFO | MonitorService | 
-Service stopped
-2026-02-09 22:24:02,969 | INFO | Main | Releasing resources
-2026-02-09 22:24:02,969 | INFO | MySQLPool | Closing MySQL pool
-2026-02-09 22:26:45,137 | INFO | MySQLPool | Initializing MySQL connection pool
-2026-02-09 22:26:53,402 | INFO | MySQLPool | Initializing success 
-2026-02-09 22:26:53,403 | INFO | MonitorService | Encode Monitor Service started
-2026-02-09 22:26:55,037 | INFO | MonitorService | 1 running jobs
-2026-02-09 22:26:55,038 | INFO | MonitorService | Found job1 time out
-2026-02-09 22:26:55,038 | INFO | MonitorService | Scan completed, sleeping 60s...
+2026-02-11 15:02:25,427 | INFO | MonitorService | Create timeout event for job 246
+2026-02-11 15:02:25,708 | INFO | MonitorService | Create timeout event for job 250
+2026-02-11 15:02:25,865 | ERROR | TimeoutEventRepo | Insert event failed for job 1
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Table 'pe_quality_metric.encode_timeout_event' doesn't exist
 
-2026-02-09 22:27:41,564 | INFO | MonitorService | 
-Service stopped
-2026-02-09 22:27:41,564 | INFO | Main | Releasing resources
-2026-02-09 22:27:41,564 | INFO | MySQLPool | Closing MySQL pool
-2026-02-09 22:27:43,577 | INFO | MySQLPool | Initializing MySQL connection pool
-2026-02-09 22:27:51,899 | INFO | MySQLPool | Initializing success 
-2026-02-09 22:27:51,900 | INFO | MonitorService | Encode Monitor Service started
-2026-02-09 22:27:53,511 | INFO | MonitorService | 1 running jobs
-2026-02-09 22:27:53,512 | INFO | MonitorService | Found job1 time out
-2026-02-09 22:27:53,512 | INFO | MonitorService | Scan completed, sleeping 60s...
+The above exception was the direct cause of the following exception:
 
-2026-02-09 22:27:56,742 | INFO | MonitorService | 
-Service stopped
-2026-02-09 22:27:56,743 | INFO | Main | Releasing resources
-2026-02-09 22:27:56,743 | INFO | MySQLPool | Closing MySQL pool
-2026-02-09 22:30:46,630 | INFO | MySQLPool | Initializing MySQL connection pool
-2026-02-09 22:30:54,987 | INFO | MySQLPool | Initializing success 
-2026-02-09 22:30:54,987 | INFO | MonitorService | Encode Monitor Service started
-2026-02-09 22:30:56,632 | INFO | MonitorService | 1 running jobs
-2026-02-09 22:30:56,632 | INFO | MonitorService | Found job1 time out
-2026-02-09 22:30:56,632 | INFO | MonitorService | Scan completed, sleeping 60s...
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 52, in insert_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<15 lines>...
+        (job_id, media_id, resolution, limit, runtime, exceed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'pe_quality_metric.encode_timeout_event' doesn't exist
+2026-02-11 15:02:26,056 | ERROR | TimeoutEventRepo | Insert event failed for job 245
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Table 'pe_quality_metric.encode_timeout_event' doesn't exist
 
-2026-02-09 22:31:14,244 | INFO | MonitorService | 
-Service stopped
-2026-02-09 22:31:14,245 | INFO | Main | Releasing resources
-2026-02-09 22:31:14,245 | INFO | MySQLPool | Closing MySQL pool
-2026-02-09 22:31:45,789 | INFO | MySQLPool | Initializing MySQL connection pool
-2026-02-09 22:31:54,287 | INFO | MySQLPool | Initializing success 
-2026-02-09 22:31:54,287 | INFO | MonitorService | Encode Monitor Service started
-2026-02-09 22:31:55,995 | INFO | MonitorService | 1 running jobs
-2026-02-09 22:31:55,996 | INFO | MonitorService | Found job1 time out
-2026-02-09 22:31:55,996 | INFO | MonitorService | Scan completed, sleeping 60s...
+The above exception was the direct cause of the following exception:
 
-2026-02-09 22:31:59,407 | INFO | MonitorService | 
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 52, in insert_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<15 lines>...
+        (job_id, media_id, resolution, limit, runtime, exceed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'pe_quality_metric.encode_timeout_event' doesn't exist
+2026-02-11 15:02:26,562 | ERROR | TimeoutEventRepo | Insert event failed for job 246
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Table 'pe_quality_metric.encode_timeout_event' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 52, in insert_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<15 lines>...
+        (job_id, media_id, resolution, limit, runtime, exceed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'pe_quality_metric.encode_timeout_event' doesn't exist
+2026-02-11 15:02:26,662 | ERROR | TimeoutEventRepo | Insert event failed for job 250
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Table 'pe_quality_metric.encode_timeout_event' doesn't exist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 52, in insert_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<15 lines>...
+        (job_id, media_id, resolution, limit, runtime, exceed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1146 (42S02): Table 'pe_quality_metric.encode_timeout_event' doesn't exist
+2026-02-11 15:02:27,009 | WARNING | MonitorService | Event already exists for job 1
+2026-02-11 15:02:27,054 | WARNING | MonitorService | Event already exists for job 245
+2026-02-11 15:02:27,665 | WARNING | MonitorService | Event already exists for job 250
+2026-02-11 15:02:27,720 | WARNING | MonitorService | Event already exists for job 246
+2026-02-11 15:03:14,687 | INFO | MonitorService | 
 Service stopped
-2026-02-09 22:31:59,408 | INFO | Main | Releasing resources
-2026-02-09 22:31:59,408 | INFO | MySQLPool | Closing MySQL pool
+2026-02-11 15:03:14,688 | INFO | Main | Releasing resources
+2026-02-11 15:03:14,688 | INFO | MySQLPool | Closing MySQL pool
+2026-02-11 15:07:46,134 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-11 15:07:55,393 | INFO | MySQLPool | Initializing success 
+2026-02-11 15:07:55,393 | INFO | MonitorService | Encode Monitor Service started
+2026-02-11 15:07:57,228 | INFO | MonitorService | 5 running jobs
+2026-02-11 15:07:57,230 | INFO | MonitorService | Found job1 time out
+2026-02-11 15:07:57,230 | INFO | MonitorService | Found job245 time out
+2026-02-11 15:07:57,231 | INFO | MonitorService | Found job246 time out
+2026-02-11 15:07:57,231 | INFO | MonitorService | Found job250 time out
+2026-02-11 15:07:59,166 | INFO | MonitorService | Create timeout event for job 1
+2026-02-11 15:07:59,489 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:07:59,669 | INFO | MonitorService | Create timeout event for job 245
+2026-02-11 15:07:59,908 | INFO | MonitorService | Create timeout event for job 246
+2026-02-11 15:08:00,170 | INFO | MonitorService | Create timeout event for job 250
+2026-02-11 15:08:00,256 | ERROR | TimeoutEventRepo | Insert event failed for job 1
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'runtime_minutes' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 52, in insert_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<15 lines>...
+        (job_id, media_id, resolution, limit, runtime, exceed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'runtime_minutes' in 'field list'
+2026-02-11 15:08:00,667 | ERROR | TimeoutEventRepo | Insert event failed for job 245
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'runtime_minutes' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 52, in insert_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<15 lines>...
+        (job_id, media_id, resolution, limit, runtime, exceed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'runtime_minutes' in 'field list'
+2026-02-11 15:08:00,986 | ERROR | TimeoutEventRepo | Insert event failed for job 246
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'runtime_minutes' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 52, in insert_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<15 lines>...
+        (job_id, media_id, resolution, limit, runtime, exceed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'runtime_minutes' in 'field list'
+2026-02-11 15:08:01,162 | ERROR | TimeoutEventRepo | Insert event failed for job 250
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'runtime_minutes' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 52, in insert_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<15 lines>...
+        (job_id, media_id, resolution, limit, runtime, exceed)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'runtime_minutes' in 'field list'
+2026-02-11 15:08:01,372 | WARNING | MonitorService | Event already exists for job 1
+2026-02-11 15:08:01,641 | WARNING | MonitorService | Event already exists for job 245
+2026-02-11 15:08:02,016 | WARNING | MonitorService | Event already exists for job 246
+2026-02-11 15:08:02,228 | WARNING | MonitorService | Event already exists for job 250
+2026-02-11 15:08:25,064 | INFO | MonitorService | 
+Service stopped
+2026-02-11 15:08:25,065 | INFO | Main | Releasing resources
+2026-02-11 15:08:25,065 | INFO | MySQLPool | Closing MySQL pool
+2026-02-11 15:10:32,938 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-11 15:10:42,244 | INFO | MySQLPool | Initializing success 
+2026-02-11 15:10:42,244 | INFO | MonitorService | Encode Monitor Service started
+2026-02-11 15:10:43,967 | INFO | MonitorService | 5 running jobs
+2026-02-11 15:10:43,968 | INFO | MonitorService | Found job1 time out
+2026-02-11 15:10:43,969 | INFO | MonitorService | Found job244 time out
+2026-02-11 15:10:43,969 | INFO | MonitorService | Found job245 time out
+2026-02-11 15:10:43,969 | INFO | MonitorService | Found job246 time out
+2026-02-11 15:10:43,969 | INFO | MonitorService | Found job250 time out
+2026-02-11 15:10:45,300 | ERROR | MySQLPool | FAILED to get MySQL connection from pool
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 15:10:45,318 | ERROR | MonitorService | Job250 error while processing
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 30, in process_job
+    event = TimeoutEventRepo.find_open_event(job_id)
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 12, in find_open_event
+    conn = MySQLPool.get_conn()
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 15:10:45,857 | INFO | MonitorService | Create timeout event for job 1
+2026-02-11 15:10:46,161 | INFO | MonitorService | Create timeout event for job 244
+2026-02-11 15:10:46,429 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:10:46,760 | INFO | MonitorService | Create timeout event for job 245
+2026-02-11 15:10:47,005 | INFO | MonitorService | Create timeout event for job 246
+2026-02-11 15:11:48,137 | INFO | MonitorService | 5 running jobs
+2026-02-11 15:11:48,137 | INFO | MonitorService | Found job1 time out
+2026-02-11 15:11:48,137 | INFO | MonitorService | Found job244 time out
+2026-02-11 15:11:48,138 | INFO | MonitorService | Found job245 time out
+2026-02-11 15:11:48,138 | INFO | MonitorService | Found job246 time out
+2026-02-11 15:11:48,138 | INFO | MonitorService | Found job250 time out
+2026-02-11 15:11:49,451 | ERROR | MySQLPool | FAILED to get MySQL connection from pool
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 15:11:49,453 | ERROR | MonitorService | Job250 error while processing
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 30, in process_job
+    event = TimeoutEventRepo.find_open_event(job_id)
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 12, in find_open_event
+    conn = MySQLPool.get_conn()
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 15:11:50,326 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 15:11:50,327 | ERROR | MonitorService | Job1 error while processing
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 56, in process_job
+    TimeoutEventRepo.update_event(job_id=job_id, exceed=exceed)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TimeoutEventRepo.update_event() missing 1 required positional argument: 'runtime'
+2026-02-11 15:11:50,392 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 15:11:50,393 | ERROR | MonitorService | Job244 error while processing
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 56, in process_job
+    TimeoutEventRepo.update_event(job_id=job_id, exceed=exceed)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TimeoutEventRepo.update_event() missing 1 required positional argument: 'runtime'
+2026-02-11 15:11:50,905 | INFO | MonitorService | Update timeout event for job 245
+2026-02-11 15:11:50,906 | ERROR | MonitorService | Job245 error while processing
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 56, in process_job
+    TimeoutEventRepo.update_event(job_id=job_id, exceed=exceed)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TimeoutEventRepo.update_event() missing 1 required positional argument: 'runtime'
+2026-02-11 15:11:50,969 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 15:11:50,970 | ERROR | MonitorService | Job246 error while processing
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 56, in process_job
+    TimeoutEventRepo.update_event(job_id=job_id, exceed=exceed)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TimeoutEventRepo.update_event() missing 1 required positional argument: 'runtime'
+2026-02-11 15:11:51,936 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:11:58,698 | INFO | MonitorService | 
+Service stopped
+2026-02-11 15:11:58,698 | INFO | Main | Releasing resources
+2026-02-11 15:11:58,699 | INFO | MySQLPool | Closing MySQL pool
+2026-02-11 15:18:03,202 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-11 15:18:12,697 | INFO | MySQLPool | Initializing success 
+2026-02-11 15:18:12,697 | INFO | MonitorService | Encode Monitor Service started
+2026-02-11 15:18:14,690 | INFO | MonitorService | 5 running jobs
+2026-02-11 15:18:14,690 | INFO | MonitorService | Found job1 time out
+2026-02-11 15:18:14,691 | INFO | MonitorService | Found job244 time out
+2026-02-11 15:18:14,691 | INFO | MonitorService | Found job245 time out
+2026-02-11 15:18:14,691 | INFO | MonitorService | Found job246 time out
+2026-02-11 15:18:14,691 | INFO | MonitorService | Found job250 time out
+2026-02-11 15:18:16,040 | ERROR | MySQLPool | FAILED to get MySQL connection from pool
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 15:18:16,043 | ERROR | MonitorService | Job250 error while processing
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 30, in process_job
+    event = TimeoutEventRepo.find_open_event(job_id)
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 12, in find_open_event
+    conn = MySQLPool.get_conn()
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 15:18:16,621 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 15:18:16,901 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 15:18:17,431 | INFO | MonitorService | Update timeout event for job 245
+2026-02-11 15:18:17,693 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 15:18:18,966 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:19:20,727 | INFO | MonitorService | 5 running jobs
+2026-02-11 15:19:20,728 | INFO | MonitorService | Found job245 time out
+2026-02-11 15:19:20,728 | INFO | MonitorService | Found job246 time out
+2026-02-11 15:19:20,728 | INFO | MonitorService | Found job244 time out
+2026-02-11 15:19:20,728 | INFO | MonitorService | Found job1 time out
+2026-02-11 15:19:20,729 | INFO | MonitorService | Found job250 time out
+2026-02-11 15:19:22,067 | ERROR | MySQLPool | FAILED to get MySQL connection from pool
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 15:19:22,069 | ERROR | MonitorService | Job250 error while processing
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 30, in process_job
+    event = TimeoutEventRepo.find_open_event(job_id)
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 12, in find_open_event
+    conn = MySQLPool.get_conn()
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 15:19:22,866 | INFO | MonitorService | Update timeout event for job 245
+2026-02-11 15:19:23,114 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 15:19:23,435 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 15:19:23,708 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 15:19:24,168 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:20:25,891 | INFO | MonitorService | 5 running jobs
+2026-02-11 15:20:25,891 | INFO | MonitorService | Found job1 time out
+2026-02-11 15:20:25,891 | INFO | MonitorService | Found job244 time out
+2026-02-11 15:20:25,892 | INFO | MonitorService | Found job245 time out
+2026-02-11 15:20:25,892 | INFO | MonitorService | Found job246 time out
+2026-02-11 15:20:25,892 | INFO | MonitorService | Found job250 time out
+2026-02-11 15:20:27,263 | ERROR | MySQLPool | FAILED to get MySQL connection from pool
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 15:20:27,265 | ERROR | MonitorService | Job250 error while processing
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 30, in process_job
+    event = TimeoutEventRepo.find_open_event(job_id)
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 12, in find_open_event
+    conn = MySQLPool.get_conn()
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 15:20:28,012 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 15:20:28,339 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 15:20:28,610 | INFO | MonitorService | Update timeout event for job 245
+2026-02-11 15:20:28,889 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 15:20:29,656 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:21:31,478 | INFO | MonitorService | 4 running jobs
+2026-02-11 15:21:31,479 | INFO | MonitorService | Found job1 time out
+2026-02-11 15:21:31,479 | INFO | MonitorService | Found job244 time out
+2026-02-11 15:21:31,479 | INFO | MonitorService | Found job246 time out
+2026-02-11 15:21:31,479 | INFO | MonitorService | Found job250 time out
+2026-02-11 15:21:33,711 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 15:21:33,998 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 15:21:33,998 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 15:21:34,529 | INFO | MonitorService | Create timeout event for job 250
+2026-02-11 15:21:35,143 | INFO | MonitorService | Close timeout event for job 245
+2026-02-11 15:21:36,216 | ERROR | TimeoutEventRepo | Close event failed for job 245
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'closed_at' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 121, in close_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<6 lines>...
+        (job_id,)
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'closed_at' in 'field list'
+2026-02-11 15:21:37,278 | ERROR | MonitorService | [SYSTEM ERROR] 1054 (42S22): Unknown column 'closed_at' in 'field list'
+2026-02-11 15:21:37,278 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:22:39,234 | INFO | MonitorService | 4 running jobs
+2026-02-11 15:22:39,234 | INFO | MonitorService | Found job1 time out
+2026-02-11 15:22:39,234 | INFO | MonitorService | Found job246 time out
+2026-02-11 15:22:39,235 | INFO | MonitorService | Found job244 time out
+2026-02-11 15:22:39,235 | INFO | MonitorService | Found job250 time out
+2026-02-11 15:22:41,419 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 15:22:41,679 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 15:22:41,952 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 15:22:42,273 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 15:22:43,087 | INFO | MonitorService | Close timeout event for job 245
+2026-02-11 15:22:44,194 | ERROR | TimeoutEventRepo | Close event failed for job 245
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'closed_at' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 121, in close_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<6 lines>...
+        (job_id,)
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'closed_at' in 'field list'
+2026-02-11 15:22:45,201 | ERROR | MonitorService | [SYSTEM ERROR] 1054 (42S22): Unknown column 'closed_at' in 'field list'
+2026-02-11 15:22:45,202 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:23:07,324 | INFO | MonitorService | 
+Service stopped
+2026-02-11 15:23:07,325 | INFO | Main | Releasing resources
+2026-02-11 15:23:07,325 | INFO | MySQLPool | Closing MySQL pool
+2026-02-11 15:49:39,237 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-11 15:49:48,707 | INFO | MySQLPool | Initializing success 
+2026-02-11 15:49:48,707 | INFO | MonitorService | Encode Monitor Service started
+2026-02-11 15:49:48,708 | ERROR | MonitorService | [SYSTEM ERROR] MonitorService.run_once() takes 2 positional arguments but 3 were given
+2026-02-11 15:49:48,708 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:50:48,709 | ERROR | MonitorService | [SYSTEM ERROR] MonitorService.run_once() takes 2 positional arguments but 3 were given
+2026-02-11 15:50:48,709 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:51:27,441 | INFO | MonitorService | 
+Service stopped
+2026-02-11 15:51:27,442 | INFO | Main | Releasing resources
+2026-02-11 15:51:27,442 | INFO | MySQLPool | Closing MySQL pool
+2026-02-11 15:51:29,819 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-11 15:51:39,424 | INFO | MySQLPool | Initializing success 
+2026-02-11 15:51:39,424 | INFO | MonitorService | Encode Monitor Service started
+2026-02-11 15:51:41,346 | INFO | MonitorService | 4 running jobs
+2026-02-11 15:51:41,346 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset_session'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:51:41,349 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 15:51:41,349 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 15:51:41,350 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 15:51:41,350 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 15:51:43,197 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 15:51:45,043 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 63, in process_job
+    TimeoutEventRepo.update_event(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        conn,
+        ^^^^^
+    ...<2 lines>...
+        exceed=exceed
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 84, in update_event
+    cursor = conn.cursor()
+             ^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 73, in process_job
+    conn.rollback()
+    ^^^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'rollback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset_session'
+2026-02-11 15:51:45,043 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 15:51:45,043 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 15:51:45,044 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:51:45,044 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 115, in close_finished_events
+    finished_jobs = VideoRepository.get_finished_jobs(conn, open_jobs)
+  File "D:\Module_sms_warning\db\video_repo.py", line 38, in get_finished_jobs
+    cursor = conn.cursor(dictionary=True)
+             ^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 125, in close_finished_events
+    conn.rollback()
+    ^^^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'rollback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset_session'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:51:45,055 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 63, in process_job
+    TimeoutEventRepo.update_event(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        conn,
+        ^^^^^
+    ...<2 lines>...
+        exceed=exceed
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 84, in update_event
+    cursor = conn.cursor()
+             ^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 73, in process_job
+    conn.rollback()
+    ^^^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'rollback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset_session'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:51:45,055 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 63, in process_job
+    TimeoutEventRepo.update_event(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        conn,
+        ^^^^^
+    ...<2 lines>...
+        exceed=exceed
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 84, in update_event
+    cursor = conn.cursor()
+             ^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 73, in process_job
+    conn.rollback()
+    ^^^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'rollback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset_session'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:51:45,056 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 15:51:45,057 | ERROR | MonitorService | [SYSTEM ERROR] 'NoneType' object has no attribute 'rollback'
+2026-02-11 15:51:45,059 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:51:46,982 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:51:48,353 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:52:46,865 | INFO | MonitorService | 4 running jobs
+2026-02-11 15:52:46,866 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset_session'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:52:46,867 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 15:52:46,867 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 15:52:46,867 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 15:52:46,867 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 15:52:50,727 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 115, in close_finished_events
+    finished_jobs = VideoRepository.get_finished_jobs(conn, open_jobs)
+  File "D:\Module_sms_warning\db\video_repo.py", line 38, in get_finished_jobs
+    cursor = conn.cursor(dictionary=True)
+             ^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 125, in close_finished_events
+    conn.rollback()
+    ^^^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'rollback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset_session'
+2026-02-11 15:52:50,727 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 15:52:50,727 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 15:52:50,727 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 15:52:50,727 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:52:50,729 | ERROR | MonitorService | [SYSTEM ERROR] 'NoneType' object has no attribute 'rollback'
+2026-02-11 15:52:50,730 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 63, in process_job
+    TimeoutEventRepo.update_event(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        conn,
+        ^^^^^
+    ...<2 lines>...
+        exceed=exceed
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 84, in update_event
+    cursor = conn.cursor()
+             ^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 73, in process_job
+    conn.rollback()
+    ^^^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'rollback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset_session'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:52:50,730 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 63, in process_job
+    TimeoutEventRepo.update_event(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        conn,
+        ^^^^^
+    ...<2 lines>...
+        exceed=exceed
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 84, in update_event
+    cursor = conn.cursor()
+             ^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 73, in process_job
+    conn.rollback()
+    ^^^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'rollback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset_session'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:52:50,731 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 63, in process_job
+    TimeoutEventRepo.update_event(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        conn,
+        ^^^^^
+    ...<2 lines>...
+        exceed=exceed
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 84, in update_event
+    cursor = conn.cursor()
+             ^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'cursor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 73, in process_job
+    conn.rollback()
+    ^^^^^^^^^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 396, in __getattr__
+    return getattr(self._cnx, attr)
+AttributeError: 'NoneType' object has no attribute 'rollback'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'reset_session'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:52:50,731 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 15:52:50,732 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:52:52,013 | INFO | MonitorService | 
+Service stopped
+2026-02-11 15:52:52,449 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:52:53,795 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 412, in close
+    self._cnx_pool.add_connection(cnx)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 610, in add_connection
+    raise PoolError("Failed adding connection; queue is full")
+mysql.connector.errors.PoolError: Failed adding connection; queue is full
+2026-02-11 15:52:53,798 | INFO | Main | Releasing resources
+2026-02-11 15:52:53,798 | INFO | MySQLPool | Closing MySQL pool
+2026-02-11 15:58:32,895 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-11 15:58:42,090 | INFO | MySQLPool | Initializing success 
+2026-02-11 15:58:42,091 | INFO | MonitorService | Encode Monitor Service started
+2026-02-11 15:58:42,815 | INFO | MonitorService | 4 running jobs
+2026-02-11 15:58:43,841 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 15:58:43,841 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 15:58:43,841 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 15:58:43,842 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 15:58:44,653 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 15:58:44,921 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 15:58:45,490 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 15:58:45,662 | INFO | MonitorService | Close timeout event for job 245
+2026-02-11 15:58:45,699 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 15:58:46,430 | ERROR | TimeoutEventRepo | Close event failed for job 245
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'closed_at' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 112, in close_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<6 lines>...
+        (job_id,)
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'closed_at' in 'field list'
+2026-02-11 15:58:46,687 | ERROR | MonitorService | Close finished events failed
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 772, in cmd_query
+    self._cmysql.query(
+    ~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<3 lines>...
+        query_attrs=self.query_attrs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Unknown column 'closed_at' in 'field list'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 119, in close_finished_events
+    TimeoutEventRepo.close_event(conn, job_id)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "D:\Module_sms_warning\db\timeout_event_repo.py", line 112, in close_event
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<6 lines>...
+        (job_id,)
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\cursor_cext.py", line 353, in execute
+    self._connection.cmd_query(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self._stmt_partition["mappable_stmt"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        raw_as_string=self._raw_as_string,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\opentelemetry\context_propagation.py", line 97, in wrapper
+    return method(cnx, *args, **kwargs)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 781, in cmd_query
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.ProgrammingError: 1054 (42S22): Unknown column 'closed_at' in 'field list'
+2026-02-11 15:58:47,925 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 15:59:07,357 | INFO | MonitorService | 
+Service stopped
+2026-02-11 15:59:07,358 | INFO | Main | Releasing resources
+2026-02-11 15:59:07,358 | INFO | MySQLPool | Closing MySQL pool
+2026-02-11 16:03:26,935 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-11 16:03:36,257 | INFO | MySQLPool | Initializing success 
+2026-02-11 16:03:36,257 | INFO | MonitorService | Encode Monitor Service started
+2026-02-11 16:03:37,021 | INFO | MonitorService | 4 running jobs
+2026-02-11 16:03:38,046 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 16:03:38,047 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 16:03:38,047 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 16:03:38,048 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 16:03:38,825 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 16:03:39,082 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 16:03:39,363 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 16:03:39,765 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 16:03:40,034 | INFO | MonitorService | Close timeout event for job 245
+2026-02-11 16:03:42,387 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 16:04:43,174 | INFO | MonitorService | 4 running jobs
+2026-02-11 16:04:44,225 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 16:04:44,226 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 16:04:44,226 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 16:04:44,226 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 16:04:45,313 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 16:04:45,525 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 16:04:45,742 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 16:04:46,079 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 16:04:47,130 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 16:05:47,893 | INFO | MonitorService | 4 running jobs
+2026-02-11 16:05:52,669 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 16:05:52,670 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 16:05:52,670 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 16:05:52,670 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 16:05:54,763 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 16:05:58,483 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 16:05:59,028 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 16:06:02,741 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 16:06:18,144 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 1144, in reset_session
+    raise OperationalError("MySQL Connection not available.")
+mysql.connector.errors.OperationalError: MySQL Connection not available.
+2026-02-11 16:06:18,147 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 16:06:20,483 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 1144, in reset_session
+    raise OperationalError("MySQL Connection not available.")
+mysql.connector.errors.OperationalError: MySQL Connection not available.
+2026-02-11 16:06:32,733 | ERROR | MySQLPool | Failed to release connect
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 986, in cmd_change_user
+    self._cmysql.change_user(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        username,
+        ^^^^^^^^^
+    ...<7 lines>...
+        openid_token_file,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+_mysql_connector.MySQLInterfaceError: Lost connection to MySQL server during query
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 38, in release_conn
+    conn.close()
+    ~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 410, in close
+    cnx.reset_session()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 1148, in reset_session
+    self.cmd_change_user(
+    ~~~~~~~~~~~~~~~~~~~~^
+        self._user,
+        ^^^^^^^^^^^
+    ...<7 lines>...
+        self._oci_config_profile,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\connection_cext.py", line 1000, in cmd_change_user
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.OperationalError: 2013 (HY000): Lost connection to MySQL server during query
+2026-02-11 16:07:18,923 | INFO | MonitorService | 4 running jobs
+2026-02-11 16:07:19,945 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 16:07:19,945 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 16:07:19,946 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 16:07:19,946 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 16:07:24,609 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 16:07:26,718 | ERROR | MySQLPool | FAILED to get MySQL connection from pool
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 16:07:26,719 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 16:07:26,722 | ERROR | MonitorService | Job 1 error while processing
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 34, in process_job
+    conn = MySQLPool.get_conn()
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 16:07:26,990 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 16:07:27,503 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 16:08:27,463 | INFO | MonitorService | 4 running jobs
+2026-02-11 16:08:28,443 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 16:08:28,443 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 16:08:28,443 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 16:08:28,443 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 16:08:29,518 | ERROR | MySQLPool | FAILED to get MySQL connection from pool
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 16:08:29,520 | ERROR | MonitorService | Job 246 error while processing
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 34, in process_job
+    conn = MySQLPool.get_conn()
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 16:08:29,528 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 16:08:30,035 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 16:08:30,037 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 16:08:31,298 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 16:09:32,105 | INFO | MonitorService | 4 running jobs
+2026-02-11 16:09:33,160 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 16:09:33,160 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 16:09:33,160 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 16:09:33,160 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 16:09:34,207 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 16:09:34,219 | ERROR | MySQLPool | FAILED to get MySQL connection from pool
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 16:09:34,221 | ERROR | MonitorService | Job 250 error while processing
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 34, in process_job
+    conn = MySQLPool.get_conn()
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 16:09:34,470 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 16:09:34,763 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 16:09:36,043 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 16:10:36,865 | INFO | MonitorService | 4 running jobs
+2026-02-11 16:10:37,871 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 16:10:37,871 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 16:10:37,871 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 16:10:37,871 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 16:10:38,866 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 16:10:38,872 | ERROR | MySQLPool | FAILED to get MySQL connection from pool
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 16:10:38,874 | ERROR | MonitorService | Job 250 error while processing
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 34, in process_job
+    conn = MySQLPool.get_conn()
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 16:10:39,138 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 16:10:39,387 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 16:10:40,682 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 16:11:41,444 | INFO | MonitorService | 4 running jobs
+2026-02-11 16:11:42,485 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 16:11:42,485 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 16:11:42,485 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 16:11:42,486 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 16:11:43,538 | ERROR | MySQLPool | FAILED to get MySQL connection from pool
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 16:11:43,539 | ERROR | MonitorService | Job 244 error while processing
+Traceback (most recent call last):
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 654, in get_connection
+    cnx = self._cnx_queue.get(block=False)
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\queue.py", line 199, in get
+    raise Empty
+_queue.Empty
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Module_sms_warning\services\monitor_service.py", line 34, in process_job
+    conn = MySQLPool.get_conn()
+  File "D:\Module_sms_warning\db\mysql_pool.py", line 28, in get_conn
+    conn = cls._pool.get_connection()
+  File "C:\Users\Xuan Khanh\AppData\Local\Programs\Python\Python313\Lib\site-packages\mysql\connector\pooling.py", line 656, in get_connection
+    raise PoolError("Failed getting connection; pool exhausted") from err
+mysql.connector.errors.PoolError: Failed getting connection; pool exhausted
+2026-02-11 16:11:43,544 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 16:11:43,813 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 16:11:44,063 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 16:11:45,347 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 16:12:27,654 | INFO | MonitorService | 
+Service stopped
+2026-02-11 16:12:27,655 | INFO | Main | Releasing resources
+2026-02-11 16:12:27,655 | INFO | MySQLPool | Closing MySQL pool
+2026-02-11 16:12:31,007 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-11 16:12:40,060 | INFO | MySQLPool | Initializing success 
+2026-02-11 16:12:40,061 | INFO | MonitorService | Encode Monitor Service started
+2026-02-11 16:12:40,788 | INFO | MonitorService | 4 running jobs
+2026-02-11 16:12:41,812 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 16:12:41,812 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 16:12:41,813 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 16:12:41,813 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 16:12:42,561 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 16:12:42,854 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 16:12:43,366 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 16:12:43,597 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 16:12:45,090 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 16:13:45,852 | INFO | MonitorService | 4 running jobs
+2026-02-11 16:13:46,854 | INFO | MonitorService | Found job 1 timeout
+2026-02-11 16:13:46,854 | INFO | MonitorService | Found job 244 timeout
+2026-02-11 16:13:46,854 | INFO | MonitorService | Found job 246 timeout
+2026-02-11 16:13:46,854 | INFO | MonitorService | Found job 250 timeout
+2026-02-11 16:13:47,891 | INFO | MonitorService | Update timeout event for job 1
+2026-02-11 16:13:48,175 | INFO | MonitorService | Update timeout event for job 244
+2026-02-11 16:13:48,399 | INFO | MonitorService | Update timeout event for job 246
+2026-02-11 16:13:48,620 | INFO | MonitorService | Update timeout event for job 250
+2026-02-11 16:13:49,541 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-11 16:14:35,084 | INFO | MonitorService | 
+Service stopped
+2026-02-11 16:14:35,085 | INFO | Main | Releasing resources
+2026-02-11 16:14:35,085 | INFO | MySQLPool | Closing MySQL pool
