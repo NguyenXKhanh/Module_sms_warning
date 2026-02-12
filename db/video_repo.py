@@ -21,7 +21,7 @@ class VideoRepository:
         return cursor.fetchall()
         
       except Exception as e:
-        logger.exception("DB QUERY FAILED in get_running_jobs")
+        logger.exception(f"DB QUERY FAILED in get_running_jobs - Error type: {type(e).__name__}, Details: {str(e)}")
         raise
 
       finally:
@@ -37,6 +37,7 @@ class VideoRepository:
 
     try:
         format_strings = ",".join(["%s"] * len(job_ids))
+        #Lấy các job nằm trong danh sách các jobs timeout trước đó nhưng đã hoàn thành
         cursor.execute(
             f"""
             SELECT id
@@ -47,7 +48,9 @@ class VideoRepository:
             tuple(job_ids)
         )
         return [row["id"] for row in cursor.fetchall()]
-
+    except Exception as e:
+      logger.exception(f"Failed to get finished jobs. Total jobs to check: {len(job_ids)}, Error: {str(e)}")
+      raise
     finally:
         cursor.close()
 

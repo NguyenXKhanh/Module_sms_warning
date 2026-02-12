@@ -35,6 +35,7 @@ class MonitorService:
 
             event = TimeoutEventRepo.find_open_event(conn, job_id)
 
+            #Kiểm tra xem job này đã được log chưa (Có thông tin trong bảng video_timeout_envent) nếu chưa thì tạo và gửi log
             if not event:
                 logger.info(f"Create timeout event for job {job_id}")
 
@@ -57,6 +58,7 @@ class MonitorService:
                     exceed=exceed
                 )
 
+            #nếu đã có thì update các thông số
             else:
                 logger.info(f"Update timeout event for job {job_id}")
                 TimeoutEventRepo.update_event(

@@ -16,9 +16,8 @@ class TimeoutEventRepo:
                 """SELECT * FROM video_timeout_event WHERE job_id=%s AND status='OPEN' FOR UPDATE""",(job_id,))
             return cursor.fetchone()
         
-        except Error:
-            logger.exception("Find event failed")
-            raise
+        except Error as e:
+            logger.exception(f"Find event failed - Job ID: {job_id}, Error code: {e.errno}, Message: {e.msg}")
         finally:
             cursor.close()
 

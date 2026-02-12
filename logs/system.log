@@ -1828,3 +1828,22 @@ Service stopped
 2026-02-11 21:09:37,285 | INFO | MonitorService | ThreadPollExecutor shutdown completed
 2026-02-11 21:09:37,285 | INFO | Main | Releasing resources
 2026-02-11 21:09:37,285 | INFO | MySQLPool | Closing MySQL pool
+2026-02-12 08:30:48,769 | INFO | MySQLPool | Initializing MySQL connection pool
+2026-02-12 08:30:57,244 | INFO | MySQLPool | Initializing success 
+2026-02-12 08:30:57,245 | INFO | MonitorService | Encode Monitor Service started
+2026-02-12 08:30:57,974 | INFO | MonitorService | 4 running jobs
+2026-02-12 08:30:59,194 | INFO | MonitorService | Found job 1 timeout
+2026-02-12 08:30:59,195 | INFO | MonitorService | Found job 244 timeout
+2026-02-12 08:30:59,195 | INFO | MonitorService | Found job 246 timeout
+2026-02-12 08:30:59,196 | INFO | MonitorService | Found job 250 timeout
+2026-02-12 08:30:59,926 | INFO | MonitorService | Update timeout event for job 1
+2026-02-12 08:31:00,120 | INFO | MonitorService | Update timeout event for job 244
+2026-02-12 08:31:00,349 | INFO | MonitorService | Update timeout event for job 246
+2026-02-12 08:31:00,853 | INFO | MonitorService | Update timeout event for job 250
+2026-02-12 08:31:02,519 | INFO | MonitorService | Scan completed, sleeping 60s...
+
+2026-02-12 08:31:06,721 | INFO | MonitorService | 
+Service stopped
+2026-02-12 08:31:06,721 | INFO | MonitorService | ThreadPollExecutor shutdown completed
+2026-02-12 08:31:06,721 | INFO | Main | Releasing resources
+2026-02-12 08:31:06,722 | INFO | MySQLPool | Closing MySQL pool
